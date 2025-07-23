@@ -37,7 +37,7 @@ streamlit run rssdeck.py
 FeedDeck supports directly sending individual articles to n8n webhooks (e.g., for Telegram, email, Airtable):
 
 ```json
-POST https://n8n.example.com/webhook/rssdeck-article
+POST https://n8n.example.com/webhook/feeddeck-article
 {
   "project": "AI News",
   "title": "GPT-5 announced",
