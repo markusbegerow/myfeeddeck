@@ -29,7 +29,7 @@ Welcome to FeedDeck - a modern, Streamlit-based app for managing, reading, and f
 git clone https://github.com/markusbegerow/feeddeck.git
 cd feeddeck
 pip install -r requirements.txt
-streamlit run rssdeck.py
+streamlit run feeddeck.py
 ```
 
 ## 🔗 n8n-Integration
