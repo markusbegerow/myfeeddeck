@@ -25,6 +25,8 @@ Welcome to MyFeedDeck - a modern, Streamlit-based app for managing, reading, and
 
 ## ▶️ Live in action
 
+![db2](https://github.com/user-attachments/assets/7e36fe82-1e87-4a9e-a5d2-ef10719a2707)
+
 ## 🛠️ Installation
 
 ```bash
