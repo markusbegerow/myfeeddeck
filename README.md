@@ -23,7 +23,9 @@ Welcome to FeedDeck - a modern, Streamlit-based app for managing, reading, and f
 |-----------------------|----------------------|
 | ![datenbanken_news](https://github.com/user-attachments/assets/13d6df61-6828-4d6d-9988-41d5ab928aca) | ![ai_data_scienes_news](https://github.com/user-attachments/assets/8537eb59-76f8-4d0a-a2b3-43243b7cd03a) |
 
+## ▶️ Live in action
 
+![Animation6](https://github.com/user-attachments/assets/c676c701-3aef-4435-bd6c-507e21234a0b)
 
 ## 🛠️ Installation
 
