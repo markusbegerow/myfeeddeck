@@ -29,7 +29,7 @@ with st.sidebar.expander("Info", expanded=False):
                     ☕ Kaffee spendieren
                 </button>
             </a>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/MarkusBegerow/feeddeck" target="_blank">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/markusbegerow/myfeeddeck" target="_blank">
                 <button style="background-color:#0A66C2; border:none; color:white; padding:10px 15px; 
                                border-radius:8px; font-weight:bold; cursor:pointer;">
                     💬 Auf LinkedIn teilen
@@ -50,7 +50,7 @@ with st.sidebar.expander("Info", expanded=False):
                     ☕ Buy me a coffee
                 </button>
             </a>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/MarkusBegerow/feeddeck" target="_blank">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/markusbegerow/myfeeddeck" target="_blank">
                 <button style="background-color:#0A66C2; border:none; color:white; padding:10px 15px; 
                                border-radius:8px; font-weight:bold; cursor:pointer;">
                     💬 Share on LinkedIn
@@ -83,7 +83,7 @@ T = {
         "add": "Feed hinzufügen",
         "feeds": "📋 Bestehende Feeds",
         "delete": "❌",
-        "project_title": "📰 FeedDeck Projekt",
+        "project_title": "📰 MyFeedDeck Projekt",
         "items": "📄 Artikel pro Feed",
         "filter": "🔍 Filter",
         "refresh": "🔄 Auto-Refresh (Sekunden)",
@@ -108,7 +108,7 @@ T = {
         "add": "Add feed",
         "feeds": "📋 Existing feeds",
         "delete": "❌",
-        "project_title": "📰 FeedDeck Project",
+        "project_title": "📰 MyFeedDeck Project",
         "items": "📄 Articles per feed",
         "filter": "🔍 Filter",
         "refresh": "🔄 Auto-refresh (seconds)",
