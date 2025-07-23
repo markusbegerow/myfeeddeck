@@ -1,6 +1,6 @@
-# FeedDeck - Your Visual RSS/Atom/XML-Dashboard
+# MyFeedDeck - Your Visual RSS/Atom/XML-Dashboard
 
-Welcome to FeedDeck - a modern, Streamlit-based app for managing, reading, and filtering RSS/Atom/XML-feeds in a visually appealing deck view. Organize your feeds into projects, stay up to date with notifications, and integrate your automations with n8n!
+Welcome to MyFeedDeck - a modern, Streamlit-based app for managing, reading, and filtering RSS/Atom/XML-feeds in a visually appealing deck view. Organize your feeds into projects, stay up to date with notifications, and integrate your automations with n8n!
 
 ## 🚀 Features
 
@@ -31,17 +31,17 @@ Welcome to FeedDeck - a modern, Streamlit-based app for managing, reading, and f
 
 ```bash
 git clone https://github.com/markusbegerow/feeddeck.git
-cd feeddeck
+cd myfeeddeck
 pip install -r requirements.txt
-streamlit run feeddeck.py
+streamlit run myfeeddeck.py
 ```
 
 ## 🔗 n8n-Integration
 
-FeedDeck supports directly sending individual articles to n8n webhooks (e.g., for Telegram, email, Airtable):
+MyFeedDeck supports directly sending individual articles to n8n webhooks (e.g., for Telegram, email, Airtable):
 
 ```json
-POST https://n8n.example.com/webhook/feeddeck-article
+POST https://n8n.example.com/webhook/myfeeddeck-article
 {
   "project": "AI News",
   "title": "GPT-5 announced",
@@ -69,9 +69,9 @@ Pull requests and feature ideas are welcome! You can:
 
 ## ☕ Support the Project
 
-If you like FeedDeck, support further development with a repost or coffee:
+If you like MyFeedDeck, support further development with a repost or coffee:
 
-<a href="https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/MarkusBegerow/feeddeck" target="_blank"> <img src="https://img.shields.io/badge/💼-Share%20on%20LinkedIn-blue" /> </a>
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/MarkusBegerow/myfeeddeck" target="_blank"> <img src="https://img.shields.io/badge/💼-Share%20on%20LinkedIn-blue" /> </a>
 
 [![Buy Me a Coffee](https://img.shields.io/badge/☕-Buy%20me%20a%20coffee-yellow)](https://paypal.me/MarkusBegerow?country.x=DE&locale.x=de_DE)
 
