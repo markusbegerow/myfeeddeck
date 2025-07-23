@@ -30,7 +30,7 @@ Welcome to MyFeedDeck - a modern, Streamlit-based app for managing, reading, and
 ## 🛠️ Installation
 
 ```bash
-git clone https://github.com/markusbegerow/feeddeck.git
+git clone https://github.com/markusbegerow/myfeeddeck.git
 cd myfeeddeck
 pip install -r requirements.txt
 streamlit run myfeeddeck.py
