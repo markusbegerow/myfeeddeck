@@ -19,9 +19,11 @@ Welcome to FeedDeck - a modern, Streamlit-based app for managing, reading, and f
 
 ## 📷 Screenshots
 
-| FeedDeck (Light Mode) | FeedDeck (Dark Mode) |
+| Sample A | Sample B |
 |-----------------------|----------------------|
-| ![Light](docs/screenshot_light.png) | ![Dark](docs/screenshot_dark.png) |
+| ![datenbanken_news](https://github.com/user-attachments/assets/13d6df61-6828-4d6d-9988-41d5ab928aca) | ![ai_data_scienes_news](https://github.com/user-attachments/assets/8537eb59-76f8-4d0a-a2b3-43243b7cd03a) |
+
+
 
 ## 🛠️ Installation
 
