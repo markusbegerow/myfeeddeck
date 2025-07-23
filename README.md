@@ -1,2 +1,83 @@
-# FeedDeck
-FeedDeck - Your Visual RSS Dashboard
+# FeedDeck - Your Visual RSS/Atom/XML-Dashboard
+
+Welcome to FeedDeck – a modern, Streamlit-based app for managing, reading, and filtering RSS/Atom/XML-feeds in a visually appealing deck view. Organize your feeds into projects, stay up to date with notifications, and integrate your automations with n8n!
+
+## 🚀 Features
+
+| Feature                            | Description                                                      |
+| ---------------------------------- | ---------------------------------------------------------------- |
+| 🧩 **Project Management**          | Create as many projects as you like, each with its own RSS feeds |
+| 📰 **Feed Deck View**              | Displays articles in columns – inspired by TweetDeck             |
+| 🌍 **Language Switch (EN/DE)**     | Toggle between English and German via dropdown                   |
+| 💡 **Meta Info & Preview**         | Shows title, meta description, and OG image of each article      |
+| ✅ **Read/Unread Status**           | Mark articles as read – persistently stored                      |
+| 🔍 **Filter Function**             | Search within a project by title or keyword                      |
+| 🌙 **Dark Mode (Streamlit Night)** | Optional dark mode for comfortable reading                       |
+| 🔔 **New Article Notifications**   | Visual indicators + optional webhook (e.g. email/Telegram)       |
+| 🔁 **n8n Integration**             | Send articles to any n8n workflow via button                     |
+| ☕ **Info & Support**               | Built-in info section with contact, GitHub, and donation link    |
+
+## 📷 Screenshots
+
+| FeedDeck (Light Mode) | FeedDeck (Dark Mode) |
+|-----------------------|----------------------|
+| ![Light](docs/screenshot_light.png) | ![Dark](docs/screenshot_dark.png) |
+
+## 🛠️ Installation
+
+```bash
+git clone https://github.com/markusbegerow/feeddeck.git
+cd feeddeck
+pip install -r requirements.txt
+streamlit run rssdeck.py
+```
+
+## 🔗 n8n-Integration
+
+FeedDeck supports directly sending individual articles to n8n webhooks (e.g., for Telegram, email, Airtable):
+
+```json
+POST https://n8n.example.com/webhook/rssdeck-article
+{
+  "project": "AI News",
+  "title": "GPT-5 announced",
+  "url": "https://example.com/article",
+  "timestamp": "2025-07-22T15:42:00Z"
+}
+```
+
+Webhooks are triggered by clicking the 🔁 button on each article.
+
+## ☁️ Upcoming Features (Roadmap)
+
+-🧠 AI summaries with OpenAI / Ollama
+-📨 Email-to-Feed (IMAP parsing)
+-🔐 Optional login functionality
+-📲 Mobile responsive view
+
+## 🙋‍♂️ Get Involved
+
+Pull requests and feature ideas are welcome! You can:
+
+- contribute new language files
+- suggest your own feed templates or themes
+- propose UI improvements
+
+## ☕ Support the Project
+
+If you like FeedDeck, support further development with a repost or coffee:
+
+<a href="https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/MarkusBegerow/feeddeck" target="_blank"> <img src="https://img.shields.io/badge/💼-Share%20on%20LinkedIn-blue" /> </a>
+
+<a href="https://paypal.me/MarkusBegerow?country.x=DE&locale.x=de_DE" target="_blank">
+            <button style="background-color:#FFD700; border:none; color:black; padding:10px 15px; 
+                           border-radius:8px; font-weight:bold; cursor:pointer; margin-top:10px;">
+                ☕ Kaffee spendieren
+            </button>
+        </a>
+
+## 📬 Contact
+
+- 🧑‍💻 [Markus Begerow](https://linkedin.com/in/markusbegerow)
+- 💾 [GitHub](https://github.com/markusbegerow)
+- ✉️ [Twitter](https://x.com/markusbegerow)
