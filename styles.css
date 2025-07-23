@@ -1,0 +1,43 @@
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.main .block-container {
+    max-width: 80%;
+    padding: 2rem;
+    transition: max-width 0.3s ease;
+}
+
+.reportview-container .markdown-text-container {
+    color: #e0e0e0;
+}
+.sidebar .sidebar-content {
+    background-color: #1f1f1f;
+}
+
+.feed-card {
+    background-color: #1f1f1f;
+    padding: 1rem;
+    border-radius: 10px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    margin-bottom: 1rem;
+}
+
+.feed-card img {
+    height: 240px !important;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.feed-card .description {
+    color: #cccccc;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
