@@ -21,11 +21,9 @@ Welcome to MyFeedDeck - a modern, Streamlit-based app for managing, reading, and
 
 | Sample A | Sample B |
 |-----------------------|----------------------|
-| ![datenbanken_news](https://github.com/user-attachments/assets/13d6df61-6828-4d6d-9988-41d5ab928aca) | ![ai_data_scienes_news](https://github.com/user-attachments/assets/8537eb59-76f8-4d0a-a2b3-43243b7cd03a) |
+| ![datenbanken_news](https://github.com/user-attachments/assets/f88fcf25-89d0-4cad-b4c3-63b81d73e179) | ![ai_data_sciences_news](https://github.com/user-attachments/assets/7d1110ee-53ea-4eb2-aefc-786990668e7c) |
 
 ## ▶️ Live in action
-
-![Animation6](https://github.com/user-attachments/assets/c676c701-3aef-4435-bd6c-507e21234a0b)
 
 ## 🛠️ Installation
 
