@@ -50,10 +50,10 @@ Webhooks are triggered by clicking the 🔁 button on each article.
 
 ## ☁️ Upcoming Features (Roadmap)
 
--🧠 AI summaries with OpenAI / Ollama
--📨 Email-to-Feed (IMAP parsing)
--🔐 Optional login functionality
--📲 Mobile responsive view
+- 🧠 AI summaries with OpenAI / Ollama
+- 📨 Email-to-Feed (IMAP parsing)
+- 🔐 Optional login functionality
+- 📲 Mobile responsive view
 
 ## 🙋‍♂️ Get Involved
 
@@ -69,12 +69,7 @@ If you like FeedDeck, support further development with a repost or coffee:
 
 <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/MarkusBegerow/feeddeck" target="_blank"> <img src="https://img.shields.io/badge/💼-Share%20on%20LinkedIn-blue" /> </a>
 
-<a href="https://paypal.me/MarkusBegerow?country.x=DE&locale.x=de_DE" target="_blank">
-            <button style="background-color:#FFD700; border:none; color:black; padding:10px 15px; 
-                           border-radius:8px; font-weight:bold; cursor:pointer; margin-top:10px;">
-                ☕ Kaffee spendieren
-            </button>
-        </a>
+[![Buy Me a Coffee](https://img.shields.io/badge/☕-Buy%20me%20a%20coffee-yellow)](https://paypal.me/MarkusBegerow?country.x=DE&locale.x=de_DE)
 
 ## 📬 Contact
 
