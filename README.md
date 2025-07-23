@@ -1,6 +1,6 @@
 # FeedDeck - Your Visual RSS/Atom/XML-Dashboard
 
-Welcome to FeedDeck – a modern, Streamlit-based app for managing, reading, and filtering RSS/Atom/XML-feeds in a visually appealing deck view. Organize your feeds into projects, stay up to date with notifications, and integrate your automations with n8n!
+Welcome to FeedDeck - a modern, Streamlit-based app for managing, reading, and filtering RSS/Atom/XML-feeds in a visually appealing deck view. Organize your feeds into projects, stay up to date with notifications, and integrate your automations with n8n!
 
 ## 🚀 Features
 
