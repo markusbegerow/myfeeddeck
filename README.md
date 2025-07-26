@@ -36,6 +36,20 @@ pip install -r requirements.txt
 streamlit run myfeeddeck.py
 ```
 
+## 🖥️ Manually via Windows Command Line (CMD)
+
+Open a Command Prompt (CMD) and run the following commands:
+```bash
+cd path\to\your\myfeeddeck
+streamlit run myfeeddeck.py
+```
+
+🔄 Or, if Python is installed via the Microsoft Store (WindowsApps):
+```bash
+cd path\to\your\myfeeddeck
+"%USERPROFILE%\AppData\Local\Microsoft\WindowsApps\python.exe" -m streamlit run myfeeddeck.py
+```
+
 ## 🔗 n8n-Integration
 
 MyFeedDeck supports directly sending individual articles to n8n webhooks (e.g., for Telegram, email, Airtable):
