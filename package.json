@@ -1,0 +1,63 @@
+{
+  "name": "myfeeddeck-electron",
+  "version": "1.0.0",
+  "description": "A professional RSS feed reader built with Electron",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "cross-env CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder",
+    "dist": "npm run build",
+    "clean": "if exist dist rmdir /s /q dist && if exist node_modules rmdir /s /q node_modules",
+    "rebuild": "npm run clean && npm install"
+  },
+  "keywords": [
+    "rss",
+    "feed",
+    "reader",
+    "electron",
+    "desktop"
+  ],
+  "author": "Markus Begerow",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "electron": "^38.3.0",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "feedparser": "^2.2.10",
+    "jsdom": "^23.0.0",
+    "node-notifier": "^10.0.1"
+  },
+  "build": {
+    "appId": "com.markusbegerow.myfeeddeck",
+    "productName": "MyFeedDeck",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "data/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icons/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icons/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icons/icon.png"
+    }
+  }
+}
