@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyFeedDeck</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+    
+    <!-- Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    
+    <div class="app-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h1>📰 MyFeedDeck</h1>
+            </div>
+
+            <!-- Info Section (First in original) -->
+            <div class="sidebar-section expandable">
+                <h3 class="section-header" onclick="toggleSection('infoSection')" data-translate="info_section">ℹ️ Info</h3>
+                <div id="infoSection" class="section-content collapsed">
+                    <div class="info-content">
+                        <p>👋 This project was created by <strong>Markus Begerow</strong>.</p>
+                        <p>📫 Contact via <a href="#" onclick="window.electronAPI.openExternal('https://linkedin.com/in/markusbegerow')">LinkedIn</a> or <a href="#" onclick="window.electronAPI.openExternal('https://github.com/markusbegerow')">GitHub</a>.</p>
+                        <div class="button-group">
+                            <button class="btn btn-coffee" onclick="window.electronAPI.openExternal('https://paypal.me/MarkusBegerow')">☕ <span data-translate="coffee_button">Buy me a coffee</span></button>
+                            <button class="btn btn-linkedin" onclick="window.electronAPI.openExternal('https://www.linkedin.com/sharing/share-offsite/?url=https://github.com/markusbegerow/myfeeddeck')">💬 <span data-translate="linkedin_share">Share on LinkedIn</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Display Settings -->
+            <div class="sidebar-section expandable">
+                <h3 class="section-header" onclick="toggleSection('displaySettings')" data-translate="display_settings">⚙️ Display Settings</h3>
+                <div id="displaySettings" class="section-content collapsed">
+                    <div class="setting-item">
+                        <label for="numItems" data-translate="items">📄 Articles per feed:</label>
+                        <input type="range" id="numItems" min="3" max="20" value="5">
+                        <span id="numItemsValue">5</span>
+                    </div>
+                    <div class="setting-item">
+                        <label for="searchTerm" data-translate="filter">🔍 Filter:</label>
+                        <input type="text" id="searchTerm" placeholder="Search articles...">
+                    </div>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="searchAllProjects">
+                            <span data-translate="search_all_projects">🔎 Search all projects</span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label for="refreshInterval" data-translate="refresh">🔄 Auto-refresh (seconds):</label>
+                        <input type="number" id="refreshInterval" min="0" max="3600" value="0">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notification Settings -->
+            <div class="sidebar-section expandable">
+                <h3 class="section-header" onclick="toggleSection('notificationSettings')" data-translate="notification_settings">🔔 Notification Settings</h3>
+                <div id="notificationSettings" class="section-content collapsed">
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="enableNotifications">
+                            <span data-translate="enable_notifications">Enable desktop notifications</span>
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label for="notificationTimeout" data-translate="notification_timeout">Notification timeout (seconds):</label>
+                        <input type="number" id="notificationTimeout" min="1" max="30" value="10">
+                    </div>
+                    <div class="setting-item notification-extras" style="display: none;">
+                        <label>
+                            <input type="checkbox" id="showImages" checked>
+                            🖼️ Show images in notifications
+                        </label>
+                    </div>
+                    <div class="setting-item notification-extras" style="display: none;">
+                        <label>
+                            <input type="checkbox" id="showStreamlitNotifications" checked>
+                            📱 Show in-app notifications
+                        </label>
+                    </div>
+                    <div class="setting-item notification-extras" style="display: none;">
+                        <label>
+                            <input type="checkbox" id="showDesktopNotifications" checked>
+                            🖥️ Show desktop notifications
+                        </label>
+                    </div>
+                    <div class="setting-item notification-extras" style="display: none;">
+                        <label>
+                            <input type="checkbox" id="playSound">
+                            🔊 Play notification sound
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <button id="testNotification" class="btn btn-secondary" data-translate="test_notification">🔔 Test Notification</button>
+                    </div>
+
+                    <!-- Notification History -->
+                    <div id="notificationHistory" class="notification-history" style="display: none;">
+                        <h4 data-translate="recent_notifications">📢 Recent Notifications</h4>
+                        <div id="notificationList" class="notification-list">
+                            <!-- Notifications will be added here -->
+                        </div>
+                        <button id="clearNotifications" class="btn btn-danger" style="display: none;" data-translate="clear_notifications">🗑️ Clear All Notifications</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Management -->
+            <div class="sidebar-section expandable">
+                <h3 class="section-header" onclick="toggleSection('projectManagement')" data-translate="project_management">📂 Project Management</h3>
+                <div id="projectManagement" class="section-content collapsed">
+                    <div class="setting-item">
+                        <label for="projectSelect" data-translate="select_project">Select project:</label>
+                        <select id="projectSelect">
+                            <option value="">Select project...</option>
+                        </select>
+                    </div>
+                    <div class="project-actions">
+                        <h4 data-translate="project_actions">📝 Project Actions</h4>
+                        <div class="setting-item">
+                            <input type="text" id="newProjectName" placeholder="New project name..." data-translate="new_project">
+                            <button id="createProject" class="btn btn-primary" data-translate="create_project">Create project</button>
+                        </div>
+                        <div class="setting-item">
+                            <button id="deleteProject" class="btn btn-danger" data-translate="delete_project">🗑️ Delete project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RSS Feed Management -->
+            <div class="sidebar-section expandable">
+                <h3 class="section-header" onclick="toggleSection('feedManagement')" data-translate="feed_management">🔍 RSS Feed Management</h3>
+                <div id="feedManagement" class="section-content collapsed">
+                    <!-- Automatic RSS Finder -->
+                    <div class="rss-finder">
+                        <h4><span data-translate="auto_rss_finder">🔎 Automatic RSS feed finder</span></h4>
+                        <div class="setting-item">
+                            <input type="text" id="websiteInput" data-translate="website_placeholder" placeholder="🌐 Enter website (e.g. https://markus-begerow.de)">
+                            <button id="findFeeds" class="btn btn-secondary">🔍 <span data-translate="find_feeds">Find feeds</span></button>
+                        </div>
+                        <div id="foundFeedsSection" class="setting-item" style="display: none;">
+                            <label for="foundFeedsSelect" data-translate="found_feeds_select">🔗 Select found feed:</label>
+                            <select id="foundFeedsSelect">
+                                <option value="" data-translate="select_found_feed">Select found feed...</option>
+                            </select>
+                            <button id="addFoundFeed" class="btn btn-primary">✅ <span data-translate="add_feed">Add feed</span></button>
+                        </div>
+                    </div>
+
+                    <!-- Existing Feeds -->
+                    <div class="existing-feeds">
+                        <h4>📋 <span data-translate="feeds">Existing feeds</span></h4>
+                        <div id="feedsList" class="feeds-list">
+                            <!-- Feed list will be populated here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Webhook Settings -->
+            <div class="sidebar-section expandable">
+                <h3 class="section-header" onclick="toggleSection('webhookSettings')" data-translate="webhook_settings">🔌 Webhook Settings</h3>
+                <div id="webhookSettings" class="section-content collapsed">
+                    <div class="setting-item">
+                        <label for="webhookUrl" data-translate="n8n_webhook">🔁 n8n Webhook (optional):</label>
+                        <input type="text" id="webhookUrl" placeholder="n8n-Server">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Language Settings -->
+            <div class="sidebar-section expandable">
+                <h3 class="section-header" onclick="toggleSection('languageSettings')" data-translate="language_settings">🌐 Language Settings</h3>
+                <div id="languageSettings" class="section-content collapsed">
+                    <div class="setting-item">
+                        <label for="languageSelect">Language / Sprache:</label>
+                        <select id="languageSelect">
+                            <option value="English">English</option>
+                            <option value="Deutsch">Deutsch</option>
+                            <option value="Español">Español</option>
+                            <option value="Italiano">Italiano</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="main-header">
+                <h1 id="projectTitle"><span data-translate="main_title">📰 MyFeedDeck Project:</span> <span id="currentProjectName" data-translate="select_project_main">Select a project</span></h1>
+                <div class="header-actions">
+                    <button id="refreshFeeds" class="btn btn-primary" data-translate="refresh_button">🔄 Refresh</button>
+                    <div id="newArticlesBadge" class="badge" style="display: none;">0 <span data-translate="new_articles">new</span></div>
+                </div>
+            </div>
+
+            <div id="loadingSpinner" class="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p data-translate="loading_feeds">Loading feeds...</p>
+            </div>
+
+            <div id="feedColumns" class="feed-columns">
+                <!-- Feed columns will be dynamically inserted here -->
+            </div>
+
+            <div id="noProjectMessage" class="no-project">
+                <h2 data-translate="welcome_title">📂 Welcome to MyFeedDeck</h2>
+                <p data-translate="welcome_message">Please select or create a project to get started with your RSS feeds.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div id="notificationContainer" class="notification-container"></div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>
